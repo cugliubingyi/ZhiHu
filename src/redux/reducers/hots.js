@@ -14,9 +14,9 @@ const hotsSlice = createSlice({
     }
 });
 
-const getHotList = () => {
+const getHotList = (listType) => {
     return dispatch => {
-        axios.get('/api/hotList.json').then(res => {
+        axios.get(`/api/${listType}HotList.json`).then(res => {
             if (res.data && res.data.success) {
                 dispatch(getHotListSuccess(res.data.data));
             }

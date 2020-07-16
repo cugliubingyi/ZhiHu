@@ -5,7 +5,8 @@ import {
     exploreReducer,
     waitingReducer,
     followReducer,
-    hotReducer
+    hotReducer,
+    userReducer
 } from './reducers';
 
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     explores: exploreReducer,
     waitings: waitingReducer,
     follows: followReducer,
-    hots: hotReducer
+    hots: hotReducer,
+    user: userReducer
 });
 
 const middleware = getDefaultMiddleware();

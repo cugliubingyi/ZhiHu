@@ -1,0 +1,66 @@
+{
+    "success": true,
+    "data": {
+        "waitingList": [{
+                "id": 1,
+                "title": "新手3个月时间能练好篮球吗?",
+                "answers": 139,
+                "browses": 4993
+            },
+            {
+                "id": 2,
+                "title": "女生应该创业吗?",
+                "answers": 704,
+                "browses": 8942
+            },
+            {
+                "id": 3,
+                "title": "LOL皮肤的“手感”是不是存在不公平的成分？",
+                "answers": 183,
+                "browses": 458627
+            },
+            {
+                "id": 4,
+                "title": "游戏玩多了对你生活有什么改变？",
+                "answers": 69,
+                "browses": 1442
+            },
+            {
+                "id": 5,
+                "title": "本人计科专业，感觉每天都在听天书，想放弃但又放弃不了，怎么办？",
+                "answers": 3,
+                "browses": 955
+            },
+            {
+                "id": 6,
+                "title": "在武汉计算机专业最好的专科学校是哪所？",
+                "answers": 2,
+                "browses": 2259
+            },
+            {
+                "id": 7,
+                "title": "前端什么电脑最高配?",
+                "answers": 4,
+                "browses": 1280
+            },
+            {
+                "id": 8,
+                "title": "《英雄联盟》中有哪些因为一句台词而被圈外人知晓的英雄？",
+                "answers": 26,
+                "browses": 973
+            },
+            {
+                "id": 9,
+                "title": "什么会决定你一天的心情？",
+                "answers": 367,
+                "browses": 4271
+            },
+            {
+                "id": 10,
+                "title": "Python中的while循环该怎么理解？",
+                "answers": 2,
+                "browses": 1703
+            }
+        ]
+    }
+}

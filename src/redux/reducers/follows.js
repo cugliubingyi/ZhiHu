@@ -9,7 +9,65 @@ const followsSlice = createSlice({
   reducers: {
     getFollowListSuccess: (state, action) => {
       const followList = action.payload.followList;
-      state.followList = followList;
+      const newFollowList = followList.map((followItem) => {
+        return {
+          ...followItem,
+          agree: false,
+          disagree: false,
+        };
+      });
+      state.followList = newFollowList;
+    },
+    increaseFollowAgreements: (state, action) => {
+      const newFollowList = state.followList.map((followItem) => {
+        if (followItem.id === action.payload) {
+          if (followItem.agree) {
+            return {
+              ...followItem,
+              agree: !followItem.agree,
+              disagree:
+                followItem.disagree && !followItem.agree
+                  ? !followItem.disagree
+                  : followItem.disagree,
+              agreements: --followItem.agreements,
+            };
+          } else {
+            return {
+              ...followItem,
+              agree: !followItem.agree,
+              disagree:
+                followItem.disagree && !followItem.agree
+                  ? !followItem.disagree
+                  : followItem.disagree,
+              agreements: ++followItem.agreements,
+            };
+          }
+        } else {
+          return followItem;
+        }
+      });
+      state.followList = newFollowList;
+    },
+    decreaseFollowAgreements: (state, action) => {
+      const newFollowList = state.followList.map((followItem) => {
+        if (followItem.id === action.payload) {
+          if (followItem.agree && !followItem.disagree) {
+            return {
+              ...followItem,
+              disagree: !followItem.disagree,
+              agree: !followItem.agree,
+              agreements: --followItem.agreements,
+            };
+          }
+          return {
+            ...followItem,
+            disagree: !followItem.disagree,
+          };
+        } else {
+          return followItem;
+        }
+      });
+      state.followList = newFollowList;
     },
   },
 });
@@ -26,7 +84,7 @@ const getFollowList = () => {
 
 const { actions, reducer } = followsSlice;
 
-export const { getFollowListSuccess } = actions;
+export const { getFollowListSuccess, decreaseFollowAgreements, increaseFollowAgreements } = actions;
 
 export { getFollowList };
 

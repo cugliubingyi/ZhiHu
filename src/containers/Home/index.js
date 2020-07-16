@@ -1,18 +1,33 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-import { getRecommendList } from '../../redux/reducers/recommends';
+import HomeLayout from '../../layout/HomeLayout';
+import RecommendItem from '../../components/home/maincontent/recommend/RecommendItem';
+import { getRecommendList } from "../../redux/reducers/recommends";
 
-const Home = () => {
-    const dispatch = useDispatch();
+const Home = (props) => {
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getRecommendList());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(getRecommendList());
+  }, [dispatch]);
 
-    return (
-        <div>Home</div>
-    );
+  const recommendList = useSelector((state) => state.recommends.recommendList);
+
+  let outputList = null;
+
+  if (recommendList.length > 0) {
+    outputList = recommendList.map((recommendItem) => (
+      <RecommendItem key={recommendItem.id} recommendItem={recommendItem} />
+    ));
+  }
+
+  return (
+    <HomeLayout>
+      {outputList}
+    </HomeLayout>
+  );
 };
 
 export default Home;
+

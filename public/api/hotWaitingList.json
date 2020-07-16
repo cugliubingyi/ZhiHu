@@ -1,0 +1,67 @@
+{
+    "success": true,
+    "data": {
+        "waitingList": [
+            {
+                "id": 1,
+                "title": "普通大学生自学JAVA怎样才能进大厂？",
+                "answers": 40,
+                "browses": 56275
+            },
+            {
+                "id": 2,
+                "title": "如何看待剑网三完全粉圈化？",
+                "answers": 55,
+                "browses": 6320
+            },
+            {
+                "id": 3,
+                "title": "如果腾讯代理了csgo你还会玩吗？",
+                "answers": 52,
+                "browses": 43730
+            },
+            {
+                "id": 4,
+                "title": "如果给你一个机会，你真的想回到高中时代吗？",
+                "answers": 178,
+                "browses": 1116
+            },
+            {
+                "id": 5,
+                "title": "马上就要升入初中了，想问下初中的人际关系很乱吗，初中有什么要注意的点吗？",
+                "answers": 95,
+                "browses": 6520
+            },
+            {
+                "id": 6,
+                "title": "姐妹们，我想吃东西，我想减肥，该如何两全？",
+                "answers": 95,
+                "browses": 1074
+            },
+            {
+                "id": 7,
+                "title": "Knight会是下一个Faker吗？有超越Faker的潜力吗？",
+                "answers": 39,
+                "browses": 21004
+            },
+            {
+                "id": 8,
+                "title": "能给我推一下你们最最喜欢的，超级温柔的歌吗？",
+                "answers": 116,
+                "browses": 681
+            },
+            {
+                "id": 9,
+                "title": "学生党，人生当中第一次买口红，有什么必买的平价口红推荐吗？",
+                "answers": 73,
+                "browses": 1807
+            },
+            {
+                "id": 10,
+                "title": "你觉得最能代表友谊的诗词是那一句？",
+                "answers": 102,
+                "browses": 1774
+            }
+        ]
+    }
+}

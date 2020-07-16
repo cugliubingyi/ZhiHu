@@ -1,0 +1,66 @@
+{
+    "success": true,
+    "data": {
+        "waitingList": [{
+                "id": 1,
+                "title": "哪个学校计算机专业好?",
+                "answers": 0,
+                "browses": 1
+            },
+            {
+                "id": 2,
+                "title": "英雄联盟为什么上不去分？",
+                "answers": 0,
+                "browses": 11
+            },
+            {
+                "id": 3,
+                "title": "专科计算机专业女生的出路在哪里?",
+                "answers": 0,
+                "browses": 4
+            },
+            {
+                "id": 4,
+                "title": "计算机专业好学吗?",
+                "answers": 0,
+                "browses": 4
+            },
+            {
+                "id": 5,
+                "title": "即将上大学该买什么笔记本?（具体）？",
+                "answers": 0,
+                "browses": 11
+            },
+            {
+                "id": 6,
+                "title": "CF那个女角色最漂亮？",
+                "answers": 0,
+                "browses": 6
+            },
+            {
+                "id": 7,
+                "title": "如何用python3计算风场，然后将数据提交给前端？",
+                "answers": 0,
+                "browses": 1
+            },
+            {
+                "id": 8,
+                "title": "玩英雄联盟每次在选英雄界面卡死是什么情况，卡完之后聊天框就显示所有人都离线，然后我只能关闭游戏框?",
+                "answers": 0,
+                "browses": 4
+            },
+            {
+                "id": 9,
+                "title": "求王者荣耀最新s20赛季游戏大厅的背景音乐 （我听着调子耳熟，但不知道曲名 ）？",
+                "answers": 0,
+                "browses": 1
+            },
+            {
+                "id": 10,
+                "title": "请问海克斯科技迦娜值钱吗？我是泳池派对宝典的免费宝典里开出来的永久皮肤。？",
+                "answers": 0,
+                "browses": 496
+            }
+        ]
+    }
+}

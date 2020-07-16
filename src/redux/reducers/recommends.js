@@ -9,7 +9,65 @@ const recommendsSlice = createSlice({
     reducers: {
         getRecommendListSuccess: (state, action) => {
             const recommendList = action.payload.recommendList;
-            state.recommendList = recommendList;
+            const newRecommendList = recommendList.map(recommendItem => {
+                return {
+                    ...recommendItem,
+                    agree: false,
+                    disagree: false
+                };
+            });
+            state.recommendList = newRecommendList;
+        },
+        increaseRecommendAgreements: (state, action) => {
+            const newRecommendList = state.recommendList.map(recommendItem => {
+                if (recommendItem.id === action.payload) {
+                    if (recommendItem.agree) {
+                        return {
+                            ...recommendItem,
+                            agree: !recommendItem.agree,
+                            disagree: 
+                              recommendItem.disagree && !recommendItem.agree
+                                ? !recommendItem.disagree
+                                : recommendItem.disagree,
+                            agreements: --recommendItem.agreements
+                        };
+                    } else {
+                        return {
+                          ...recommendItem,
+                          agree: !recommendItem.agree,
+                          disagree:
+                            recommendItem.disagree && !recommendItem.agree
+                              ? !recommendItem.disagree
+                              : recommendItem.disagree,
+                          agreements: ++recommendItem.agreements,
+                        };
+                    }
+                } else {
+                    return recommendItem;
+                }
+            });
+            state.recommendList = newRecommendList;
+        },
+        decreaseRecommendAgreements: (state, action) => {
+            const newRecommendList = state.recommendList.map(recommendItem => {
+                if (recommendItem.id === action.payload) {
+                    if (recommendItem.agree && !recommendItem.disagree) {
+                        return {
+                            ...recommendItem,
+                            disagree: !recommendItem.disagree,
+                            agree: !recommendItem.agree,
+                            agreements: --recommendItem.agreements
+                        }
+                    }
+                    return {
+                        ...recommendItem,
+                        disagree: !recommendItem.disagree
+                    };
+                } else {
+                    return recommendItem;
+                }
+            });
+            state.recommendList = newRecommendList;
         }
     }
 });
@@ -26,7 +84,7 @@ const getRecommendList = () => {
 
 const { actions, reducer } = recommendsSlice;
 
-export const { getRecommendListSuccess } = actions;
+export const { getRecommendListSuccess, increaseRecommendAgreements, decreaseRecommendAgreements } = actions;
 
 export { getRecommendList };
 
